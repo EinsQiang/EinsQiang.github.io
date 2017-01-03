@@ -96,12 +96,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/03/Markdown语法/index.html">
 <meta property="og:site_name" content="EinsQiang'S Note">
 <meta property="og:description" content="Markdown语法简单介绍">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1694734-b8dcc15470e99a92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/124">
-<meta property="og:updated_time" content="2017-01-03T11:55:41.000Z">
+<meta property="og:image" content="https://www.zybuluo.com/static/img/my_head.jpg">
+<meta property="og:updated_time" content="2017-01-03T13:06:55.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法">
 <meta name="twitter:description" content="Markdown语法简单介绍">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1694734-b8dcc15470e99a92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/124">
+<meta name="twitter:image" content="https://www.zybuluo.com/static/img/my_head.jpg">
 
 
 
@@ -239,6 +239,8 @@
             
 
   <div id="posts" class="posts-expand">
+      #render方法第二个参数is_index为是否为首页
+      #第三个参数is_pv为我们刚才设置的是否显示计数
     
 
   
@@ -309,6 +311,12 @@
           
 
           
+            <span>&nbsp; | &nbsp;
+            <span id="busuanzi_value_page_pv" ></span>次阅读
+            </span>    
+          
+
+          
 
           
           
@@ -327,46 +335,63 @@
       
         <p>Markdown语法简单介绍</p>
 <a id="more"></a>
-<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>两段之间需要空行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">段落一</div><div class="line"></div><div class="line">段落二</div></pre></td></tr></table></figure>
-<h2 id="粗体、斜体"><a href="#粗体、斜体" class="headerlink" title="粗体、斜体"></a>粗体、斜体</h2><p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong><em>粗体</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">*斜体*</div><div class="line">_斜体_</div><div class="line">**粗体**</div><div class="line">***粗体***</div></pre></td></tr></table></figure>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p><del>这样</del></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~这样~~</div></pre></td></tr></table></figure>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div><div class="line">#### H4</div><div class="line">##### H5</div><div class="line">###### H6</div></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>海内存知己，天涯若比邻</p>
+<h3 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h3><p>使用 <em> 和 *</em> 表示斜体和粗体</p>
+<p><em>斜体</em></p>
+<p><strong>粗体</strong></p>
+<h3 id="2-删除线"><a href="#2-删除线" class="headerlink" title="2. 删除线"></a>2. 删除线</h3><p>使用 ~~文字~~ 表示删除线。</p>
+<p><del>这是一段错误的文本。</del></p>
+<h3 id="3-文字引用"><a href="#3-文字引用" class="headerlink" title="3. 文字引用"></a>3. 文字引用</h3><p>使用 &gt; 表示文字引用。</p>
+<blockquote>
+<p>野火烧不尽，春风吹又生。</p>
 <blockquote>
 <p>碧瑶</p>
 </blockquote>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;海内存知己，天涯若比邻</div><div class="line">&gt;&gt;碧瑶</div></pre></td></tr></table></figure>
-<p>也可以嵌套其他格式</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>Red</li>
-<li>Bule</li>
-<li>Green</li>
+<h3 id="4-自动链接"><a href="#4-自动链接" class="headerlink" title="4. 自动链接"></a>4. 自动链接</h3><p>使用 &lt;&gt; 包裹网址</p>
+<p><a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a></p>
+<h3 id="5-外链接"><a href="#5-外链接" class="headerlink" title="5. 外链接"></a>5. 外链接</h3><p>使用 [描述](链接地址) 为文字增加外链接</p>
+<p><a href="www.baidu.com">百度</a></p>
+<h3 id="6-插入图像"><a href="#6-插入图像" class="headerlink" title="6. 插入图像"></a>6. 插入图像</h3><p>使用 ![描述](图片链接地址) 插入图像。</p>
+<p><img src="https://www.zybuluo.com/static/img/my_head.jpg" alt="我的头像"></p>
+<h3 id="7-转义字符"><a href="#7-转义字符" class="headerlink" title="7. 转义字符"></a>7. 转义字符</h3><p>前面加上反斜杠<code>\</code></p>
+<h3 id="8-行内代码块"><a href="#8-行内代码块" class="headerlink" title="8. 行内代码块"></a>8. 行内代码块</h3><p>使用 `代码` 表示行内代码块。</p>
+<p>让我们聊聊 <code>python</code>。</p>
+<h3 id="9-代码块"><a href="#9-代码块" class="headerlink" title="9. 代码块"></a>9. 代码块</h3><p>使用 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```python</div><div class="line">def addtwonum(a,b):</div><div class="line">    return a+b</div></pre></td></tr></table></figure></p>
+<h3 id="10-分隔线"><a href="#10-分隔线" class="headerlink" title="10. 分隔线"></a>10. 分隔线</h3><p>使用 <em>*</em></p>
+<hr>
+<h3 id="11-段落"><a href="#11-段落" class="headerlink" title="11. 段落"></a>11. 段落</h3><p>两段之间需要空行</p>
+<p>段落一</p>
+<p>段落二</p>
+<h3 id="12-分级标题"><a href="#12-分级标题" class="headerlink" title="12. 分级标题"></a>12. 分级标题</h3><p>使用 # </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line"></div><div class="line">## H2</div><div class="line"></div><div class="line">### H3</div><div class="line"></div><div class="line">#### H4</div></pre></td></tr></table></figure>
+<h3 id="13-无序列表"><a href="#13-无序列表" class="headerlink" title="13. 无序列表"></a>13. 无序列表</h3><p>使用 *，+，- 表示无序列表。</p>
+<ul>
+<li>无序列表项 一</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* Red</div><div class="line">* Bule</div><div class="line">* Green</div></pre></td></tr></table></figure>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
-<li>Red</li>
-<li>Blue</li>
-<li>Green</li>
+<ul>
+<li>无序列表项 二</li>
+</ul>
+<ul>
+<li>无序列表项 三</li>
+</ul>
+<h3 id="14-有序列表"><a href="#14-有序列表" class="headerlink" title="14. 有序列表"></a>14. 有序列表</h3><p>使用数字和点表示有序列表</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. Red</div><div class="line">2. Blue</div><div class="line">3. Green</div></pre></td></tr></table></figure>
-<h2 id="内联代码"><a href="#内联代码" class="headerlink" title="内联代码"></a>内联代码</h2><p><code>code</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`code`</div></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">addtwonum</span><span class="params">(a,b)</span>:</span></div><div class="line">  <span class="keyword">return</span> a+b</div></pre></td></tr></table></figure>
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">***</div></pre></td></tr></table></figure>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="www.baidu.com">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](www.baidu.com)</div></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://upload-images.jianshu.io/upload_images/1694734-b8dcc15470e99a92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/124" alt="百度"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![百度](/path/to/img.jpg)</div></pre></td></tr></table></figure>
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p><a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http://www.baidu.com/&gt;</div></pre></td></tr></table></figure>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>前面加上反斜杠<code>\</code></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<h3 id="15-嵌套列表"><a href="#15-嵌套列表" class="headerlink" title="15. 嵌套列表"></a>15. 嵌套列表</h3><ul>
+<li>一<ul>
+<li>1.1</li>
+<li>1.2</li>
+</ul>
+</li>
+<li>二<ul>
+<li>2.1</li>
+</ul>
+</li>
+</ul>
+<h3 id="16-表格"><a href="#16-表格" class="headerlink" title="16. 表格"></a>16. 表格</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">Item</th>
@@ -393,7 +418,7 @@
 </tbody>
 </table>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Item     | Value | Qty   |</div><div class="line">| :------- | ----: | :---: |</div><div class="line">| Computer | $1600 |  5    |</div><div class="line">| Phone    | $12   |  12   |</div><div class="line">| Pipe     | $1    |  234  |</div></pre></td></tr></table></figure>
-<h2 id="TeX公式"><a href="#TeX公式" class="headerlink" title="TeX公式"></a>TeX公式</h2><h2 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h2>
+<h3 id="17-TeX公式"><a href="#17-TeX公式" class="headerlink" title="17. TeX公式"></a>17. TeX公式</h3><h3 id="18-UML图"><a href="#18-UML图" class="headerlink" title="18. UML图"></a>18. UML图</h3>
       
     </div>
 
@@ -444,16 +469,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/03/Conda常用/" rel="next" title="Conda常用">
-                <i class="fa fa-chevron-left"></i> Conda常用
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/13/Atom使用/" rel="prev" title="Atom使用">
-                Atom使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/03/Conda常用/" rel="prev" title="Conda常用">
+                Conda常用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -465,7 +486,7 @@
     </footer>
   </article>
 
-
+ 
 
     <div class="post-spread">
       
@@ -526,7 +547,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -609,7 +630,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#段落"><span class="nav-number">1.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#粗体、斜体"><span class="nav-number">2.</span> <span class="nav-text">粗体、斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除线"><span class="nav-number">3.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">4.</span> <span class="nav-text">标题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H1"><span class="nav-number"></span> <span class="nav-text">H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#H2"><span class="nav-number">1.</span> <span class="nav-text">H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#H3"><span class="nav-number">1.1.</span> <span class="nav-text">H3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#H4"><span class="nav-number">1.1.1.</span> <span class="nav-text">H4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#H5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">H5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#H6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">H6</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表"><span class="nav-number">4.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内联代码"><span class="nav-number">5.</span> <span class="nav-text">内联代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分隔线"><span class="nav-number">7.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">8.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">9.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动链接"><span class="nav-number">10.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义字符"><span class="nav-number">11.</span> <span class="nav-text">转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">12.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TeX公式"><span class="nav-number">13.</span> <span class="nav-text">TeX公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML图"><span class="nav-number">14.</span> <span class="nav-text">UML图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-斜体和粗体"><span class="nav-number">1.</span> <span class="nav-text">1. 斜体和粗体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-删除线"><span class="nav-number">2.</span> <span class="nav-text">2. 删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-文字引用"><span class="nav-number">3.</span> <span class="nav-text">3. 文字引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-自动链接"><span class="nav-number">4.</span> <span class="nav-text">4. 自动链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-外链接"><span class="nav-number">5.</span> <span class="nav-text">5. 外链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-插入图像"><span class="nav-number">6.</span> <span class="nav-text">6. 插入图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-转义字符"><span class="nav-number">7.</span> <span class="nav-text">7. 转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-行内代码块"><span class="nav-number">8.</span> <span class="nav-text">8. 行内代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-代码块"><span class="nav-number">9.</span> <span class="nav-text">9. 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-分隔线"><span class="nav-number">10.</span> <span class="nav-text">10. 分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-段落"><span class="nav-number">11.</span> <span class="nav-text">11. 段落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-分级标题"><span class="nav-number">12.</span> <span class="nav-text">12. 分级标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-无序列表"><span class="nav-number">13.</span> <span class="nav-text">13. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-有序列表"><span class="nav-number">14.</span> <span class="nav-text">14. 有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-嵌套列表"><span class="nav-number">15.</span> <span class="nav-text">15. 嵌套列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-表格"><span class="nav-number">16.</span> <span class="nav-text">16. 表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-TeX公式"><span class="nav-number">17.</span> <span class="nav-text">17. TeX公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-UML图"><span class="nav-number">18.</span> <span class="nav-text">18. UML图</span></a></li></ol></div>
             
           </div>
         </section>
@@ -646,6 +667,11 @@
   </a>
 </div>
 
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
         
 
         

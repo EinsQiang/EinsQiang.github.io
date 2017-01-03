@@ -90,15 +90,67 @@
 
 
 
-<meta name="description" content="Stay Hungry.Stay Foolish.">
-<meta property="og:type" content="website">
+<meta name="description" content="Hexo Blog1. 搭建博客
+安装 Git
+
+安装 Node.js
+
+安装 Hexo
+
+
+1$ npm install -g hexo
+
+创建 Hexo 文件夹
+
+123$ hexo init &amp;lt;folder&amp;gt;$ cd &amp;lt;folder&amp;gt;$ npm install
+
+使用默认主题
+
+12$ hexo g$ hexo s --debug
+通过http://localhost">
+<meta property="og:type" content="article">
 <meta property="og:title" content="EinsQiang'S Note">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/01/03/Hexo/index.html">
 <meta property="og:site_name" content="EinsQiang'S Note">
-<meta property="og:description" content="Stay Hungry.Stay Foolish.">
+<meta property="og:description" content="Hexo Blog1. 搭建博客
+安装 Git
+
+安装 Node.js
+
+安装 Hexo
+
+
+1$ npm install -g hexo
+
+创建 Hexo 文件夹
+
+123$ hexo init &amp;lt;folder&amp;gt;$ cd &amp;lt;folder&amp;gt;$ npm install
+
+使用默认主题
+
+12$ hexo g$ hexo s --debug
+通过http://localhost">
+<meta property="og:updated_time" content="2017-01-03T12:36:17.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EinsQiang'S Note">
-<meta name="twitter:description" content="Stay Hungry.Stay Foolish.">
+<meta name="twitter:description" content="Hexo Blog1. 搭建博客
+安装 Git
+
+安装 Node.js
+
+安装 Hexo
+
+
+1$ npm install -g hexo
+
+创建 Hexo 文件夹
+
+123$ hexo init &amp;lt;folder&amp;gt;$ cd &amp;lt;folder&amp;gt;$ npm install
+
+使用默认主题
+
+12$ hexo g$ hexo s --debug
+通过http://localhost">
 
 
 
@@ -116,7 +168,7 @@
   };
 </script>
 
-  <title> EinsQiang'S Note </title>
+  <title>  | EinsQiang'S Note </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +189,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,11 +286,11 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
+      #render方法第二个参数is_index为是否为首页
+      #第三个参数is_pv为我们刚才设置的是否显示计数
     
-       #render方法第二个参数is_index为是否为首页
-       #第三个参数is_pv为我们刚才设置的是否显示计数
-      
 
   
   
@@ -261,9 +311,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/03/Hexo/" itemprop="url">
-                  未命名
-                </a>
               
             
           </h1>
@@ -294,6 +341,10 @@
           
 
           
+            <span>&nbsp; | &nbsp;
+            <span id="busuanzi_value_page_pv" ></span>次阅读
+            </span>    
+          
 
           
 
@@ -312,9 +363,7 @@
       
 
       
-        
-          
-            <h2 id="Hexo-Blog"><a href="#Hexo-Blog" class="headerlink" title="Hexo Blog"></a>Hexo Blog</h2><h2 id="1-搭建博客"><a href="#1-搭建博客" class="headerlink" title="1. 搭建博客"></a>1. 搭建博客</h2><ul>
+        <h2 id="Hexo-Blog"><a href="#Hexo-Blog" class="headerlink" title="Hexo Blog"></a>Hexo Blog</h2><h2 id="1-搭建博客"><a href="#1-搭建博客" class="headerlink" title="1. 搭建博客"></a>1. 搭建博客</h2><ul>
 <li><p>安装 <a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 </li>
 <li><p>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></p>
@@ -398,16 +447,40 @@
 <p>背景颜色直接更改即可：body { background: #F0F0F0; }</p>
 <p>添加背景：body { background: url（’/images/background.jpg’); }(将背景图片放到hexo/source/images中即可。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🍭 来根棒棒糖！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/reward_wechatpay.png" alt="EinsQiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/reward_alipay.png" alt="EinsQiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
@@ -415,555 +488,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-       #render方法第二个参数is_index为是否为首页
-       #第三个参数is_pv为我们刚才设置的是否显示计数
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/24/获取城市经纬度/" itemprop="url">
-                  获取城市经纬度
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-24T19:41:22+08:00" content="2016-12-24">
-              2016-12-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/24/获取城市经纬度/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/24/获取城市经纬度/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>两种方法获取城市的经纬度</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/24/获取城市经纬度/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-       #render方法第二个参数is_index为是否为首页
-       #第三个参数is_pv为我们刚才设置的是否显示计数
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/13/Atom使用/" itemprop="url">
-                  Atom使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-13T20:47:46+08:00" content="2016-11-13">
-              2016-11-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编辑器/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/13/Atom使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/Atom使用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" rel="gallery_cixhk2qi90002ygw2lalkmz0f"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" itemprop="contentUrl"/>
+              <a href="/2016/12/24/获取城市经纬度/" rel="next" title="获取城市经纬度">
+                <i class="fa fa-chevron-left"></i> 获取城市经纬度
               </a>
             
-          
+          </div>
 
-          
+          <div class="post-nav-prev post-nav-item">
+            
           </div>
         </div>
       
 
       
-        
-          <p>Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X、Windows和Linux操作系统，支持Node.js所写的插件，并内置Git版本控制系统。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/13/Atom使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
+ 
 
-    
-       #render方法第二个参数is_index为是否为首页
-       #第三个参数is_pv为我们刚才设置的是否显示计数
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/03/Conda常用/" itemprop="url">
-                  Conda常用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-03T16:13:43+08:00" content="2016-03-03">
-              2016-03-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/03/Conda常用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/Conda常用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhk2qi00000ygw20dydzivf"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <p>Anaconda是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/03/Conda常用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-       #render方法第二个参数is_index为是否为首页
-       #第三个参数is_pv为我们刚才设置的是否显示计数
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/03/Markdown语法/" itemprop="url">
-                  Markdown语法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-03T19:13:43+08:00" content="2016-01-03">
-              2016-01-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编辑器/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/03/Markdown语法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/Markdown语法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Markdown语法简单介绍</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/03/Markdown语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -971,6 +521,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/03/Hexo/"
+           data-title="" data-url="http://yoursite.com/2017/01/03/Hexo/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -990,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oj6uf9zcj.bkt.clouddn.com/avatar.png"
@@ -1078,6 +645,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Blog"><span class="nav-number">1.</span> <span class="nav-text">Hexo Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-搭建博客"><span class="nav-number">2.</span> <span class="nav-text">1. 搭建博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置github-pages"><span class="nav-number">3.</span> <span class="nav-text">2. 配置github pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-配置SSH密钥"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 配置SSH密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-将本地的Hexo文件更新到Github的库中"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 将本地的Hexo文件更新到Github的库中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置博客"><span class="nav-number">4.</span> <span class="nav-text">3. 配置博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-全站配置"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 全站配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-更换主题"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-图标"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-主题颜色"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 主题颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-背景颜色"><span class="nav-number">4.5.</span> <span class="nav-text">3.5 背景颜色</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1186,6 +764,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
