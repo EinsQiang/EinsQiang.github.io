@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2016/11/13/Atom%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-01-03T07:41:55.963Z</lastmod>
+    <lastmod>2017-01-03T07:50:12.562Z</lastmod>
     <data>
         <display>
         <title>Atom使用</title>
@@ -18,21 +18,6 @@
              
               <breadCrumb title="编辑器" url="http://yoursite.com/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/03/hello-world/</loc>
-    <lastmod>2017-01-03T02:51:22.217Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-01-03T02:51:22.217Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
