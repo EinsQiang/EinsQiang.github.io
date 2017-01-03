@@ -259,6 +259,149 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/24/获取城市经纬度/" itemprop="url">
+                  获取城市经纬度
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-24T19:41:22+08:00" content="2016-12-24">
+              2016-12-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编辑器/" itemprop="url" rel="index">
+                    <span itemprop="name">编辑器</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/24/获取城市经纬度/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/24/获取城市经纬度/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-高德-百度地图API"><a href="#1-高德-百度地图API" class="headerlink" title="1. 高德/百度地图API"></a>1. 高德/百度地图API</h2><ul>
+<li>获取json格式的<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 加不加 u'' 都可以</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line">reload(sys)</div><div class="line">sys.setdefaultencoding(<span class="string">"utf-8"</span>)</div><div class="line"></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> json</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getLonLat</span><span class="params">(addr)</span>:</span></div><div class="line">    url = <span class="string">u'http://restapi.amap.com/v3/geocode/geo?address=&#123;0&#125;&amp;city=北京&amp;output=JSON&amp;key=945ae54516979776ab3ee717012c24d4'</span>.format(</div><div class="line">        addr)</div><div class="line">    html = urllib2.urlopen(url)</div><div class="line">    data = html.read()</div><div class="line">    jdata = json.loads(data)</div><div class="line">    location = str(jdata[<span class="string">'geocodes'</span>][<span class="number">0</span>][<span class="string">'location'</span>]).split(<span class="string">','</span>)</div><div class="line">    <span class="keyword">return</span> location</div><div class="line"></div><div class="line"><span class="keyword">print</span> getLonLat(<span class="string">u'中关村'</span>)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 加不加 u'' 都可以</span></div><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</div><div class="line"><span class="keyword">import</span> json</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getLonLat</span><span class="params">(addr)</span>:</span></div><div class="line">    url = <span class="string">u'http://restapi.amap.com/v3/geocode/geo?address=&#123;0&#125;&amp;city=&#123;1&#125;&amp;output=JSON&amp;key=945ae54516979776ab3ee717012c24d4'</span>.format(</div><div class="line">        urllib.parse.quote(addr), urllib.parse.quote(<span class="string">u'北京'</span>))</div><div class="line">    html = urlopen(url)</div><div class="line">    data = html.read().decode(<span class="string">'utf-8'</span>)</div><div class="line">    jdata = json.loads(data)</div><div class="line">    location = str(jdata[<span class="string">'geocodes'</span>][<span class="number">0</span>][<span class="string">'location'</span>]).split(<span class="string">','</span>)</div><div class="line">    <span class="keyword">return</span> location</div><div class="line"></div><div class="line">print(getLonLat(<span class="string">u'中关村'</span>))</div></pre></td></tr></table></figure>
+<ul>
+<li><p>返回json格式</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    <span class="attr">"info"</span>: <span class="string">"OK"</span>,</div><div class="line">    <span class="attr">"infocode"</span>: <span class="string">"10000"</span>,</div><div class="line">    <span class="attr">"count"</span>: <span class="string">"1"</span>,</div><div class="line">    <span class="attr">"geocodes"</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"formatted_address"</span>: <span class="string">"北京市海淀区中关村"</span>,</div><div class="line">            <span class="attr">"province"</span>: <span class="string">"北京市"</span>,</div><div class="line">            <span class="attr">"citycode"</span>: <span class="string">"010"</span>,</div><div class="line">            <span class="attr">"city"</span>: <span class="string">"北京市"</span>,</div><div class="line">            <span class="attr">"district"</span>: <span class="string">"海淀区"</span>,</div><div class="line">            <span class="attr">"township"</span>: [],</div><div class="line">            <span class="attr">"neighborhood"</span>: &#123;</div><div class="line">                <span class="attr">"name"</span>: [],</div><div class="line">                <span class="attr">"type"</span>: []</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"building"</span>: &#123;</div><div class="line">                <span class="attr">"name"</span>: [],</div><div class="line">                <span class="attr">"type"</span>: []</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"adcode"</span>: <span class="string">"110108"</span>,</div><div class="line">            <span class="attr">"street"</span>: [],</div><div class="line">            <span class="attr">"number"</span>: [],</div><div class="line">            <span class="attr">"location"</span>: <span class="string">"116.314526,39.982338"</span>,</div><div class="line">            <span class="attr">"level"</span>: <span class="string">"村庄"</span></div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取html格式</p>
+</li>
+</ul>
+<p>同理，使用BeautifulSoup解析</p>
+<h2 id="2-Geopy"><a href="#2-Geopy" class="headerlink" title="2.Geopy"></a>2.Geopy</h2><ul>
+<li><p>地址–&gt;经纬度</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">from</span> geopy.geocoders <span class="keyword">import</span> Nominatim</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getLocationByGeo</span><span class="params">(cityname)</span>:</span></div><div class="line">    geolocator = Nominatim()</div><div class="line">    location2 = geolocator.geocode(cityname)</div><div class="line">    lat = location2.latitude</div><div class="line">    lng = location2.longitude</div><div class="line">    <span class="keyword">return</span> <span class="string">"%s  %s,%s"</span> % (cityname, lat, lng)</div><div class="line"></div><div class="line"><span class="keyword">print</span> getLocationByGeo(<span class="string">'中关村'</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>经纬度–&gt;地址</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">from</span> geopy.geocoders <span class="keyword">import</span> Nominatim</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getCitynameByGeo</span><span class="params">(lat_lng)</span>:</span></div><div class="line">    geolocator = Nominatim()</div><div class="line">    location = geolocator.reverse(lat_lng)</div><div class="line">    addr = location.address</div><div class="line">    cityname = re.split(<span class="string">"[/,]"</span>, addr)[<span class="number">-5</span>].strip()</div><div class="line">    <span class="keyword">return</span> addr, cityname</div><div class="line"></div><div class="line"><span class="keyword">print</span> getCitynameByGeo(<span class="string">'45.743237,126.632461'</span>)</div></pre></td></tr></table></figure>
+<h2 id="3-能力"><a href="#3-能力" class="headerlink" title="3. 能力"></a>3. 能力</h2><ul>
+<li>API &gt; Geopy</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/13/Atom使用/" itemprop="url">
                   Atom使用
                 </a>
@@ -330,7 +473,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" rel="gallery_cixhfnhs40000isw2eh58flps"
+                 href="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" rel="gallery_cixhg65fb000018w2z7m6p9gw"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" itemprop="contentUrl"/>
               </a>
@@ -347,6 +490,145 @@
           <p>Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X、Windows和Linux操作系统，支持Node.js所写的插件，并内置Git版本控制系统。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/13/Atom使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/03/Markdown语法/" itemprop="url">
+                  Conda常用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-03T19:13:43+08:00" content="2016-01-03">
+              2016-01-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编辑器/" itemprop="url" rel="index">
+                    <span itemprop="name">编辑器</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/03/Markdown语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/Markdown语法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhg65g0000618w2xv5ikzaf"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>两段之间需要空行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">段落一</div><div class="line"></div><div class="line">段落二</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/03/Markdown语法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -425,8 +707,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编辑器/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -468,7 +750,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhfnhsc0002isw2y43zk9zv"
+                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhg65fl000218w2dnpktwpn"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" itemprop="contentUrl"/>
               </a>
@@ -555,7 +837,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -563,7 +845,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -572,7 +854,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
