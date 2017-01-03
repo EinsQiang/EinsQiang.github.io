@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/03/Hexo/</loc>
+    <lastmod>2017-01-03T13:35:11.465Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-01-03T12:36:16.676Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/01/03/Markdown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2017-01-03T13:06:55.569Z</lastmod>
     <data>
@@ -18,21 +33,6 @@
              
               <breadCrumb title="编辑器" url="http://yoursite.com/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/03/Hexo/</loc>
-    <lastmod>2017-01-03T12:36:17.154Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-01-03T12:36:16.676Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

@@ -397,7 +397,23 @@
 <h3 id="3-5-背景颜色"><a href="#3-5-背景颜色" class="headerlink" title="3.5 背景颜色"></a>3.5 背景颜色</h3><p>打开<code>hexo/themes/next/source/css/_schemes/Pisces/index.styl</code>(Pisces为NexT提供的三种主题之一，根据使用的主题选择）修改body{}内的值，如下：</p>
 <p>背景颜色直接更改即可：body { background: #F0F0F0; }</p>
 <p>添加背景：body { background: url（’/images/background.jpg’); }(将背景图片放到hexo/source/images中即可。</p>
-
+<h3 id="3-6-站点访问统计"><a href="#3-6-站点访问统计" class="headerlink" title="3.6 站点访问统计"></a>3.6 站点访问统计</h3><ul>
+<li>站点总访问量</li>
+</ul>
+<p>打开<code>hexo/themes/next/layout/_partials/footer.swig</code>，添加如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">本站总访问量 &lt;span id=<span class="string">"busuanzi_value_site_pv"</span>&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</div><div class="line">您是第&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;&lt;/span&gt;个来到的小伙伴</div></pre></td></tr></table></figure>
+<ul>
+<li>单页面访问量</li>
+</ul>
+<p>打开<code>Hexo/themes/next/layout/_macro/post.swig</code>，添加如下：</p>
+<p>位于文件开头,在第三个参数的位置，增加is_pv字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% macro render(post, is_index, is_pv, post_extra_class) %&#125;</div></pre></td></tr></table></figure>
+<p>插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% if is_pv %&#125;</div><div class="line">  &lt;span&gt;&amp;nbsp; | &amp;nbsp;</div><div class="line">  &lt;span id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;次阅读</div><div class="line">  &lt;/span&gt;    </div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>修改<code>Hexo/themes/next/layout/post.swig</code>，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&#123;% block content %&#125;</div><div class="line"></div><div class="line">  &lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">      #render方法第二个参数is_index为是否为首页</div><div class="line">      #第三个参数is_pv为我们刚才设置的是否显示计数</div><div class="line">    &#123;&#123; post_template.render(page, false, true) &#125;&#125; </div><div class="line"></div><div class="line">    &lt;div class=&quot;post-spread&quot;&gt;</div><div class="line">      &#123;% if theme.jiathis %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/jiathis.swig&apos; %&#125;</div><div class="line">      &#123;% elseif theme.baidushare %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/baidushare.swig&apos; %&#125;</div><div class="line">      &#123;% elseif theme.add_this_id %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/add-this.swig&apos; %&#125;</div><div class="line">      &#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/duoshuo_share.swig&apos; %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line"></div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
+<p>修改<code>E:\Hexo\themes\next\layout\index.swig</code>，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% block content %&#125;</div><div class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">    &#123;% for post in page.posts %&#125;</div><div class="line">       #render方法第二个参数is_index为是否为首页</div><div class="line">       #第三个参数is_pv为我们刚才设置的是否显示计数</div><div class="line">      &#123;&#123; post_template.render(post, true, false) &#125;&#125;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">  &lt;/section&gt;</div><div class="line"></div><div class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
           
         
       
@@ -647,7 +663,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" rel="gallery_cixhk2qi90002ygw2lalkmz0f"
+                 href="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" rel="gallery_cixhk7dxe0001kkw271y2xi72"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://oj6uf9zcj.bkt.clouddn.com/atom_0.png" itemprop="contentUrl"/>
               </a>
@@ -789,7 +805,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhk2qi00000ygw20dydzivf"
+                 href="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" rel="gallery_cixhk7dxm0002kkw2k4pwpk2c"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://oj6uf9zcj.bkt.clouddn.com/anaconda.png" itemprop="contentUrl"/>
               </a>
@@ -1114,7 +1130,7 @@
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp 本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
 您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
         
 
