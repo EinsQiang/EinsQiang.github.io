@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/11/13/Atom%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-01-03T07:20:06.128Z</lastmod>
+    <data>
+        <display>
+        <title>Atom使用</title>
+        <pubTime>2016-11-13T12:47:46.000Z</pubTime>
+        
+        <tag>Atom</tag>
+         
+         
+           
+             
+              <breadCrumb title="编辑器" url="http://yoursite.com/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/03/hello-world/</loc>
     <lastmod>2017-01-03T02:51:22.217Z</lastmod>
     <data>
