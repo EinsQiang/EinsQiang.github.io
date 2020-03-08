@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>category</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2"><a class="md-toc-inner" href="#map">map</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n4"><a class="md-toc-inner" href="#set">set</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n6"><a class="md-toc-inner" href="#链表">链表</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n8"><a class="md-toc-inner" href="#快慢指针">快慢指针</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n10"><a class="md-toc-inner" href="#滑动窗口">滑动窗口</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n12"><a class="md-toc-inner" href="#二分">二分</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n14"><a class="md-toc-inner" href="#动态规划">动态规划</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n16"><a class="md-toc-inner" href="#模拟">模拟</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n18"><a class="md-toc-inner" href="#数学">数学</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21"><a class="md-toc-inner" href="#双指针">双指针</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n23"><a class="md-toc-inner" href="#回溯递归">回溯/递归</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n25"><a class="md-toc-inner" href="#栈队列堆优先队列">栈/队列/堆/优先队列</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n27"><a class="md-toc-inner" href="#排序">排序</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n29"><a class="md-toc-inner" href="#二叉树">二叉树</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n30"><a class="md-toc-inner" href="#中序遍历">中序遍历</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n32"><a class="md-toc-inner" href="#递归">递归</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n34"><a class="md-toc-inner" href="#层序遍历">层序遍历</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n36"><a class="md-toc-inner" href="#动态规划-n36">动态规划</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n38"><a class="md-toc-inner" href="#回溯">回溯</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n40"><a class="md-toc-inner" href="#其他">其他</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n43"><a class="md-toc-inner" href="#股票">股票</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n45"><a class="md-toc-inner" href="#位运算">位运算</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n47"><a class="md-toc-inner" href="#规律">规律</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n50"><a class="md-toc-inner" href="#字符串">字符串</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n52"><a class="md-toc-inner" href="#sunday">Sunday</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n55"><a class="md-toc-inner" href="#数组">数组</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n58"><a class="md-toc-inner" href="#抽屉原理">抽屉原理</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n60"><a class="md-toc-inner" href="#贪心">贪心</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n62"><a class="md-toc-inner" href="#广度搜索">广度搜索</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n64"><a class="md-toc-inner" href="#序列">序列</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n66"><a class="md-toc-inner" href="#桶">桶</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n68"><a class="md-toc-inner" href="#投票">投票</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n70"><a class="md-toc-inner" href="#拓扑排序">拓扑排序</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n72"><a class="md-toc-inner" href="#区间">区间</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n75"><a class="md-toc-inner" href="#trie树">Trie树</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n77"><a class="md-toc-inner" href="#其他-n77">其他</a></span></p></div><h4><a name="map" class="md-header-anchor"></a><span>map</span></h4><p><a href='#point_1'><span>1. 两数之和</span></a>
+<a href='#point_30'><span>30. 串联所有单词的子串</span></a>
+<a href='#point_49'><span>49. 字母异位词分组</span></a>
+<a href='#point_187'><span>187. 重复的DNA序列</span></a>
+<a href='#point_205'><span>205. 同构字符串</span></a>
+<a href='#point_242'><span>242. 有效的字母异位词</span></a>
+<a href='#point_287'><span>287. 寻找重复数</span></a>
+<a href='#point_290'><span>290. 单词规律</span></a>
+<a href='#point_349'><span>349. 两个数组的交集</span></a>
+<a href='#point_350'><span>350. 两个数组的交集 II</span></a>
+<a href='#point_387'><span>387. 字符串中的第一个唯一字符</span></a>
+<a href='#point_389'><span>389. 找不同</span></a>
+<a href='#point_412'><span>412. Fizz Buzz</span></a>
+<a href='#point_454'><span>454. 四数相加 II</span></a></p><h4><a name="set" class="md-header-anchor"></a><span>set</span></h4><p><a href='#point_217'><span>217. 存在重复元素</span></a>
+<a href='#point_219'><span>219. 存在重复元素 II</span></a>
+<a href='#point_220'><span>220. 存在重复元素 III</span></a></p><h4><a name="链表" class="md-header-anchor"></a><span>链表</span></h4><p><a href='#point_2'><span>2. 两数相加</span></a>
+<a href='#point_445'><span>445. 两数相加 II</span></a>
+<a href='#point_21'><span>21. 合并两个有序链表</span></a>
+<a href='#point_23'><span>23. 合并K个排序链表</span></a>
+<a href='#point_24'><span>24. 两两交换链表中的节点</span></a>
+<a href='#point_25'><span>25. K 个一组翻转链表</span></a>
+<a href='#point_61'><span>61. 旋转链表</span></a>
+<a href='#point_86'><span>86. 分隔链表</span></a>
+<a href='#point_92'><span>92. 反转链表 II</span></a>
+<a href='#point_206'><span>206. 反转链表</span></a>
+<a href='#point_138'><span>138. 复制带随机指针的链表</span></a>
+<a href='#point_147'><span>147. 对链表进行插入排序</span></a>
+<a href='#point_148'><span>148. 排序链表</span></a>
+<a href='#point_160'><span>160. 相交链表</span></a>
+<a href='#point_203'><span>203. 移除链表元素</span></a>
+<a href='#point_237'><span>237. 删除链表中的节点</span></a>
+<a href='#point_328'><span>328. 奇偶链表</span></a></p><h4><a name="快慢指针" class="md-header-anchor"></a><span>快慢指针</span></h4><p><a href='#point_19'><span>19. 删除链表的倒数第N个节点</span></a>
+<a href='#point_82'><span>82. 删除排序链表中的重复元素 II</span></a>
+<a href='#point_83'><span>83. 删除排序链表中的重复元素</span></a>
+<a href='#point_141'><span>141. 环形链表</span></a>
+<a href='#point_142'><span>142. 环形链表 II</span></a>
+<a href='#point_143'><span>143. 重排链表</span></a>
+<a href='#point_202'><span>202. 快乐数</span></a>
+<a href='#point_234'><span>234. 回文链表</span></a></p><h4><a name="滑动窗口" class="md-header-anchor"></a><span>滑动窗口</span></h4><p><a href='#point_3'><span>3. 无重复字符的最长子串</span></a>
+<a href='#point_76'><span>76. 最小覆盖子串</span></a>
+<a href='#point_209'><span>209. 长度最小的子数组</span></a>
+<a href='#point_239'><span>239. 滑动窗口最大值</span></a>
+<a href='#point_438'><span>438. 找到字符串中所有字母异位词</span></a></p><h4><a name="二分" class="md-header-anchor"></a><span>二分</span></h4><p><a href='#point_4'><span>4. 寻找两个有序数组的中位数</span></a>
+<a href='#point_33'><span>33. 搜索旋转排序数组</span></a>
+<a href='#point_81'><span>81. 搜索旋转排序数组 II</span></a>
+<a href='#point_34'><span>34. 在排序数组中查找元素的第一个和最后一个位置</span></a>
+<a href='#point_35'><span>35. 搜索插入位置</span></a>
+<a href='#point_50'><span>50. Pow(x, n)</span></a>
+<a href='#point_69'><span>69. x 的平方根</span></a>
+<a href='#point_74'><span>74. 搜索二维矩阵</span></a>
+<a href='#point_240'><span>240. 搜索二维矩阵 II</span></a>
+<a href='#point_153'><span>153. 寻找旋转排序数组中的最小值</span></a>
+<a href='#point_154'><span>154. 寻找旋转排序数组中的最小值 II</span></a>
+<a href='#point_162'><span>162. 寻找峰值</span></a>
+<a href='#point_278'><span>278. 第一个错误的版本</span></a>
+<a href='#point_367'><span>367. 有效的完全平方数</span></a>
+<a href='#point_374'><span>374. 猜数字大小</span></a>
+<a href='#point_704'><span>704. 二分查找</span></a></p><h4><a name="动态规划" class="md-header-anchor"></a><span>动态规划</span></h4><p><a href='#point_5'><span>5. 最长回文子串</span></a>
+<a href='#point_647'><span>647. 回文子串</span></a>
+<a href='#point_516'><span>516. 最长回文子序列</span></a>
+<a href='#point_1312'><span>1312. 让字符串成为回文串的最少插入次数</span></a>
+<a href='#point_10'><span>10. 正则表达式匹配</span></a>
+<a href='#point_44'><span>44. 通配符匹配</span></a>
+<a href='#point_32'><span>32. 最长有效括号</span></a>
+<a href='#point_42'><span>42. 接雨水</span></a>
+<a href='#point_62'><span>62. 不同路径</span></a>
+<a href='#point_63'><span>63. 不同路径 II</span></a>
+<a href='#point_64'><span>64. 最小路径和</span></a>
+<a href='#point_70'><span>70. 爬楼梯</span></a>
+<a href='#point_509'><span>509. 斐波那契数</span></a>
+<a href='#point_72'><span>72. 编辑距离</span></a>
+<a href='#point_91'><span>91. 解码方法</span></a>
+<a href='#point_97'><span>97. 交错字符串</span></a>
+<a href='#point_115'><span>115. 不同的子序列</span></a>
+<a href='#point_120'><span>120. 三角形最小路径和</span></a>
+<a href='#point_132'><span>132. 分割回文串 II</span></a>
+<a href='#point_139'><span>139. 单词拆分</span></a>
+<a href='#point_152'><span>152. 乘积最大子序列</span></a>
+<a href='#point_174'><span>174. 地下城游戏</span></a>
+<a href='#point_198'><span>198. 打家劫舍</span></a>
+<a href='#point_213'><span>213. 打家劫舍 II</span></a>
+<a href='#point_337'><span>337. 打家劫舍 III</span></a>
+<a href='#point_221'><span>221. 最大正方形</span></a>
+<a href='#point_279'><span>279. 完全平方数</span></a>
+<a href='#point_300'><span>300. 最长上升子序列</span></a>
+<a href='#point_435'><span>435. 无重叠区间</span></a>
+<a href='#point_637'><span>673. 最长递增子序列的个数</span></a>
+<a href='#point_322'><span>322. 零钱兑换</span></a>
+<a href='#point_518'><span>518. 零钱兑换 II</span></a>
+<a href='#point_343'><span>343. 整数拆分</span></a>
+<a href='#point_376'><span>376. 摆动序列</span></a>
+<a href='#point_377'><span>377. 组合总和 Ⅳ</span></a>
+<a href='#point_416'><span>416. 分割等和子集</span></a>
+<a href='#point_474'><span>474. 一和零</span></a>
+<a href='#point_494'><span>494. 目标和</span></a>
+<a href='#point_887'><span>887. 鸡蛋掉落</span></a>
+<a href='#point_1143'><span>1143. 最长公共子序列</span></a></p><h4><a name="模拟" class="md-header-anchor"></a><span>模拟</span></h4><p><a href='#point_6'><span>6. Z 字形变换</span></a>
+<a href='#point_38'><span>38. 外观数列</span></a>
+<a href='#point_45'><span>45. 跳跃游戏 II</span></a>
+<a href='#point_55'><span>55. 跳跃游戏</span></a>
+<a href='#point_48'><span>48. 旋转图像</span></a>
+<a href='#point_54'><span>54. 螺旋矩阵</span></a>
+<a href='#point_59'><span>59. 螺旋矩阵 II</span></a>
+<a href='#point_66'><span>66. 加一</span></a>
+<a href='#point_73'><span>73. 矩阵置零</span></a>
+<a href='#point_118'><span>118. 杨辉三角</span></a>
+<a href='#point_119'><span>119. 杨辉三角 II</span></a>
+<a href='#point_134'><span>134. 加油站</span></a>
+<a href='#point_135'><span>135. 分发糖果</span></a>
+<a href='#point_146'><span>146. LRU缓存机制</span></a>
+<a href='#point_149'><span>149. 直线上最多的点数</span></a>
+<a href='#point_165'><span>165. 比较版本号</span></a>
+<a href='#point_168'><span>168. Excel表列名称</span></a>
+<a href='#point_171'><span>171. Excel表列序号</span></a>
+<a href='#point_189'><span>189. 旋转数组</span></a>
+<a href='#point_218'><span>218. 天际线问题</span></a>
+<a href='#point_223'><span>223. 矩形面积</span></a>
+<a href='#point_289'><span>289. 生命游戏</span></a>
+<a href='#point_299'><span>299. 猜数字游戏</span></a>
+<a href='#point_341'><span>341. 扁平化嵌套列表迭代器</span></a>
+<a href='#point_447'><span>447. 回旋镖的数量</span></a>
+<a href='#point_860'><span>860. 柠檬水找零</span></a>
+<a href=''><span>05. 替换空格</span></a>
+<a href=''><span>17. 打印从1到最⼤的n位数</span></a></p><h4><a name="数学" class="md-header-anchor"></a><span>数学</span></h4><p><a href='#point_7'><span>7. 整数反转</span></a>
+<a href='#point_8'><span>8. 字符串转换整数 (atoi)</span></a>
+<a href='#point_9'><span>9. 回文数</span></a>
+<a href='#point_12'><span>12. 整数转罗马数字</span></a>
+<a href='#point_13'><span>13. 罗马数字转整数</span></a>
+<a href='#point_29'><span>29. 两数相除</span></a>
+<a href='#point_43'><span>43. 字符串相乘</span></a>
+<a href='#point_67'><span>67. 二进制求和</span></a>
+<a href='#point_415'><span>415. 字符串相加</span></a>
+<a href='#point_166'><span>166. 分数到小数</span></a>
+<a href='#point_204'><span>204. 计数质数</span></a>
+<a href='#point_233'><span>233. 数字 1 的个数</span></a></p><h4><a name="双指针" class="md-header-anchor"></a><span>双指针</span></h4><p><a href='#point_11'><span>11. 盛最多水的容器</span></a>
+<a href='#point_15'><span>15. 三数之和</span></a>
+<a href='#point_16'><span>16. 最接近的三数之和</span></a>
+<a href='#point_18'><span>18. 四数之和</span></a>
+<a href='#point_26'><span>26. 删除排序数组中的重复项</span></a>
+<a href='#point_80'><span>80. 删除排序数组中的重复项 II</span></a>
+<a href='#point_27'><span>27. 移除元素</span></a>
+<a href='#point_125'><span>125. 验证回文串</span></a>
+<a href='#point_151'><span>151. 翻转字符串里的单词</span></a>
+<a href='#point_557'><span>557. 反转字符串中的单词 III</span></a>
+<a href='#point_167'><span>167. 两数之和 II - 输入有序数组</span></a>
+<a href=''><span>57. 和为s的连续正数序列</span></a>
+<a href='#point_283'><span>283. 移动零</span></a>
+<a href='#point_344'><span>344. 反转字符串</span></a>
+<a href='#point_345'><span>345. 反转字符串中的元音字母</span></a>
+<a href=''><span>21. 调整数组顺序使奇数位于偶数前⾯</span></a></p><h4><a name="回溯递归" class="md-header-anchor"></a><span>回溯/递归</span></h4><p><a href='#point_17'><span>17. 电话号码的字母组合</span></a>
+<a href='#point_22'><span>22. 括号生成</span></a>
+<a href='#point_36'><span>36. 有效的数独</span></a>
+<a href='#point_37'><span>37. 解数独</span></a>
+<a href='#point_39'><span>39. 组合总和</span></a>
+<a href='#point_40'><span>40. 组合总和 II</span></a>
+<a href='#point_216'><span>216. 组合总和 III</span></a>
+<a href='#point_46'><span>46. 全排列</span></a>
+<a href='#point_47'><span>47. 全排列 II</span></a>
+<a href='#point_51'><span>51. N皇后</span></a>
+<a href='#point_52'><span>52. N皇后 II</span></a>
+<a href='#point_77'><span>77. 组合</span></a>
+<a href='#point_78'><span>78. 子集</span></a>
+<a href='#point_90'><span>90. 子集 II</span></a>
+<a href='#point_79'><span>79. 单词搜索</span></a>
+<a href='#point_93'><span>93. 复原IP地址</span></a>
+<a href='#point_130'><span>130. 被围绕的区域</span></a>
+<a href='#point_131'><span>131. 分割回文串</span></a>
+<a href='#point_140'><span>140. 单词拆分 II</span></a>
+<a href='#point_200'><span>200. 岛屿数量</span></a>
+<a href='#point_329'><span>329. 矩阵中的最长递增路径</span></a>
+<a href='#point_417'><span>417. 太平洋大西洋水流问题</span></a>
+<a href='#point_241'><span>241. 为运算表达式设计优先级</span></a>
+<a href='#point_282'><span>282. 给表达式添加运算符</span></a>
+<a href='#point_329'><span>329. 矩阵中的最递增路径</span></a>
+<a href='#point_395'><span>395. 至少有K个重复字符的最长子串</span></a>
+<a href='#point_401'><span>401. 二进制手表</span></a>
+<a href='#point_417'><span>417. 太平洋大西洋水流问题</span></a></p><h4><a name="栈队列堆优先队列" class="md-header-anchor"></a><span>栈/队列/堆/优先队列</span></h4><p><a href='#point_20'><span>20. 有效的括号</span></a>
+<a href='#point_71'><span>71. 简化路径</span></a>
+<a href='#point_150'><span>150. 逆波兰表达式求值</span></a>
+<a href='#point_155'><span>155. 最小栈</span></a>
+<a href='#point_224'><span>224. 基本计算器</span></a>
+<a href='#point_227'><span>227. 基本计算器 II</span></a>
+<a href='#point_225'><span>225. 用队列实现栈</span></a>
+<a href='#point_232'><span>232. 用栈实现队列</span></a>
+<a href='#point_295'><span>295. 数据流的中位数</span></a>
+<a href='#point_347'><span>347. 前 K 个高频元素</span></a>
+<a href='#point_378'><span>378. 有序矩阵中第K小的元素</span></a>
+<a href='#point_394'><span>394. 字符串解码</span></a>
+<a href='#point_739'><span>739. 每日温度</span></a>
+<a href=''><span>06. 从尾到头打印链表</span></a>
+<a href=''><span>31. 栈的压⼊、弹出序列</span></a>
+<a href=''><span>59. 队列的最⼤值</span></a></p><h4><a name="排序" class="md-header-anchor"></a><span>排序</span></h4><p><a href='#point_75'><span>75. 颜色分类</span></a>
+<a href='#point_179'><span>179. 最大数</span></a>
+<a href='#point_215'><span>215. 数组中的第K个最大元素</span></a>
+<a href='#point_268'><span>268. 缺失数字</span></a>
+<a href='#point_315'><span>315. 计算右侧小于当前元素的个数</span></a>
+<a href='#point_406'><span>406. 根据身高重建队列</span></a>
+<a href='#point_451'><span>451. 根据字符出现频率排序</span></a>
+<a href='#point_581'><span>581. 最短无序连续子数组</span></a></p><h2><a name="二叉树" class="md-header-anchor"></a><span>二叉树</span></h2><h4><a name="中序遍历" class="md-header-anchor"></a><span>中序遍历</span></h4><p><a href='#point_94'><span>94. 二叉树的中序遍历</span></a>
+<a href='#point_98'><span>98. 验证二叉搜索树</span></a>
+<a href='#point_99'><span>99. 恢复二叉搜索树</span></a>
+<a href='#point_105'><span>105. 从前序与中序遍历序列构造二叉树</span></a>
+<a href='#point_106'><span>106. 从中序与后序遍历序列构造二叉树</span></a>
+<a href='#point_173'><span>173. 二叉搜索树迭代器</span></a>
+<a href='#point_230'><span>230. 二叉搜索树中第K小的元素</span></a>
+<a href=''><span>36. ⼆叉搜索树与双向链表</span></a></p><h4><a name="递归" class="md-header-anchor"></a><span>递归</span></h4><p><a href='#point_95'><span>95. 不同的二叉搜索树 II</span></a>
+<a href='#point_100'><span>100. 相同的树</span></a>
+<a href='#point_101'><span>101. 对称二叉树</span></a>
+<a href='#point_104'><span>104. 二叉树的最大深度</span></a>
+<a href='#point_108'><span>108. 将有序数组转换为二叉搜索树</span></a>
+<a href='#point_109'><span>109. 有序链表转换二叉搜索树</span></a>
+<a href='#point_110'><span>110. 平衡二叉树</span></a>
+<a href='#point_111'><span>111. 二叉树的最小深度</span></a>
+<a href='#point_112'><span>112. 路径总和</span></a>
+<a href='#point_437'><span>437. 路径总和 III</span></a>
+<a href='#point_124'><span>124. 二叉树中的最大路径和</span></a>
+<a href='#point_129'><span>129. 求根到叶子节点数字之和</span></a>
+<a href='#point_199'><span>199. 二叉树的右视图</span></a>
+<a href='#point_222'><span>222. 完全二叉树的节点个数</span></a>
+<a href='#point_226'><span>226. 翻转二叉树</span></a>
+<a href='#point_235'><span>235. 二叉搜索树的最近公共祖先</span></a>
+<a href='#point_236'><span>236. 二叉树的最近公共祖先</span></a>
+<a href='#point_257'><span>257. 二叉树的所有路径</span></a>
+<a href='#point_404'><span>404. 左叶子之和</span></a>
+<a href='#point_543'><span>543. 二叉树的直径</span></a>
+<a href='#point_617'><span>617. 合并二叉树</span></a>
+<a href=''><span>26. 树的⼦结构</span></a>
+<a href=''><span>33. ⼆叉搜索树的后序遍历序列</span></a></p><h4><a name="层序遍历" class="md-header-anchor"></a><span>层序遍历</span></h4><p><a href='#point_102'><span>102. 二叉树的层次遍历</span></a>
+<a href='#point_103'><span>103. 二叉树的锯齿形层次遍历</span></a>
+<a href='#point_107'><span>107. 二叉树的层次遍历 II</span></a>
+<a href='#point_662'><span>662. 二叉树最大宽度</span></a></p><h4><a name="动态规划-n36" class="md-header-anchor"></a><span>动态规划</span></h4><p><a href='#point_96'><span>96. 不同的二叉搜索树</span></a></p><h4><a name="回溯" class="md-header-anchor"></a><span>回溯</span></h4><p><a href='#point_113'><span>113. 路径总和 II</span></a></p><h4><a name="其他" class="md-header-anchor"></a><span>其他</span></h4><p><a href='#point_114'><span>114. 二叉树展开为链表</span></a>
+<a href='#point_116'><span>116. 填充每个节点的下一个右侧节点指针</span></a>
+<a href='#point_117'><span>117. 填充每个节点的下一个右侧节点指针 II</span></a>
+<a href='#point_144'><span>144. 二叉树的前序遍历</span></a>
+<a href='#point_145'><span>145. 二叉树的后序遍历</span></a>
+<a href='#point_297'><span>297. 二叉树的序列化与反序列化</span></a>
+<a href='#point_450'><span>450. 删除二叉搜索树中的节点</span></a>
+<a href='#point_538'><span>538. 把二叉搜索树转换为累加树</span></a></p><h4><a name="股票" class="md-header-anchor"></a><span>股票</span></h4><p><a href='#point_121'><span>121. 买卖股票的最佳时机</span></a>
+<a href='#point_122'><span>122. 买卖股票的最佳时机 II</span></a>
+<a href='#point_123'><span>123. 买卖股票的最佳时机 III</span></a>
+<a href='#point_188'><span>188. 买卖股票的最佳时机 IV</span></a>
+<a href='#point_309'><span>309. 最佳买卖股票时机含冷冻期</span></a>
+<a href='#point_714'><span>714. 买卖股票的最佳时机含手续费</span></a></p><h4><a name="位运算" class="md-header-anchor"></a><span>位运算</span></h4><p><a href='#point_136'><span>136. 只出现一次的数字</span></a>
+<a href='#point_137'><span>137. 只出现一次的数字 II</span></a>
+<a href='#point_260'><span>260. 只出现一次的数字 III</span></a>
+<a href='#point_190'><span>190. 颠倒二进制位</span></a>
+<a href='#point_191'><span>191. 位1的个数</span></a>
+<a href='#point_201'><span>201. 数字范围按位与</span></a>
+<a href='#point_231'><span>231. 2的幂</span></a>
+<a href='#point_326'><span>326. 3的幂</span></a>
+<a href='#point_342'><span>342. 4的幂</span></a>
+<a href='#point_371'><span>371. 两整数之和</span></a>
+<a href='#point_461'><span>461. 汉明距离</span></a></p><h4><a name="规律" class="md-header-anchor"></a><span>规律</span></h4><p><a href='#point_31'><span>31. 下一个排列</span></a>
+<a href='#point_60'><span>60. 第k个排列</span></a>
+<a href='#point_89'><span>89. 格雷编码</span></a>
+<a href='#point_172'><span>172. 阶乘后的零</span></a>
+<a href='#point_258'><span>258. 各位相加</span></a>
+<a href='#point_263'><span>263. 丑数</span></a>
+<a href='#point_264'><span>264. 丑数 II</span></a>
+<a href='#point_274'><span>274. H指数</span></a>
+<a href='#point_275'><span>275. H指数 II</span></a>
+<a href='#point_292'><span>292. Nim 游戏</span></a>
+<a href='#point_324'><span>324. 摆动排序 II</span></a>
+<a href='#point_334'><span>334. 递增的三元子序列</span></a>
+<a href='#point_400'><span>400. 第N个数字</span></a></p><h4><a name="字符串" class="md-header-anchor"></a><span>字符串</span></h4><p><a href='#point_14'><span>14. 最长公共前缀</span></a>
+<a href='#point_58'><span>58. 最后一个单词的长度</span></a>
+<a href='#point_65'><span>65. 有效数字</span></a>
+<a href='#point_214'><span>214. 最短回文串</span></a>
+<a href='#point_392'><span>392. 判断子序列</span></a>
+<a href=''><span>58. 左旋转字符串</span></a></p><h4><a name="sunday" class="md-header-anchor"></a><span>Sunday</span></h4><p><a href='#point_28'><span>28. 实现 strStr()</span></a></p><h4><a name="数组" class="md-header-anchor"></a><span>数组</span></h4><p><a href='#point_88'><span>88. 合并两个有序数组</span></a>
+<a href='#point_238'><span>238. 除自身以外数组的乘积</span></a></p><h4><a name="抽屉原理" class="md-header-anchor"></a><span>抽屉原理</span></h4><p><a href='#point_41'><span>41. 缺失的第一个正数</span></a>
+<a href='#point_442'><span>442. 数组中重复的数据</span></a>
+<a href='#point_448'><span>448. 找到所有数组中消失的数字</span></a></p><h4><a name="贪心" class="md-header-anchor"></a><span>贪心</span></h4><p><a href='#point_53'><span>53. 最大子序和</span></a>
+<a href='#point_455'><span>455. 分发饼干</span></a></p><h4><a name="广度搜索" class="md-header-anchor"></a><span>广度搜索</span></h4><p><a href='#point_127'><span>127. 单词接龙</span></a>
+<a href='#point_133'><span>133. 克隆图</span></a></p><h4><a name="序列" class="md-header-anchor"></a><span>序列</span></h4><p><a href='#point_128'><span>128. 最长连续序列</span></a>
+<a href='#point_674'><span>674. 最长连续递增序列</span></a></p><h4><a name="桶" class="md-header-anchor"></a><span>桶</span></h4><p><a href='#point_164'><span>164. 最大间距</span></a></p><h4><a name="投票" class="md-header-anchor"></a><span>投票</span></h4><p><a href='#point_169'><span>169. 多数元素</span></a>
+<a href='#point_229'><span>229. 求众数 II</span></a></p><h4><a name="拓扑排序" class="md-header-anchor"></a><span>拓扑排序</span></h4><p><a href='#point_207'><span>207. 课程表</span></a>
+<a href='#point_210'><span>210. 课程表 II</span></a></p><h4><a name="区间" class="md-header-anchor"></a><span>区间</span></h4><p><a href='#point_56'><span>56. 合并区间</span></a>
+<a href='#point_57'><span>57. 插入区间</span></a>
+<a href='#point_228'><span>228. 汇总区间</span></a></p><h4><a name="trie树" class="md-header-anchor"></a><span>Trie树</span></h4><p><a href='#point_208'><span>208. 实现 Trie (前缀树)</span></a>
+<a href='#point_211'><span>211. 添加与搜索单词 - 数据结构设计</span></a>
+<a href='#point_212'><span>212. 单词搜索 II</span></a></p><h4><a name="其他-n77" class="md-header-anchor"></a><span>其他</span></h4><p><a href='#point_380'><span>380. 常数时间插入、删除和获取随机元素</span></a>
+<a href='#point_384'><span>384. 打乱数组</span></a>
+<a href='#point_525'><span>525. 连续数组</span></a>
+<a href='#point_560'><span>560. 和为K的子数组</span></a>
+<a href=''><span>60. n个骰⼦的点数</span></a>
+<a href=''><span>61. 扑克牌中的顺⼦</span></a>
+<a href=''><span>62. 圆圈中最后剩下的数字</span></a>
+<a href=''><span>64. 求1+2+…+n</span></a></p></div>
+</body>
+</html>
